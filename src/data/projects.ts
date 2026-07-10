@@ -1,0 +1,218 @@
+import {
+  Infinity as InfinityIcon,
+  LayoutDashboard,
+  Users,
+  UserPlus,
+  Shield,
+  Bell,
+  FolderOpen,
+  MonitorSmartphone,
+  Palette,
+  Layers,
+  Zap,
+  Lock,
+  Cpu,
+  GitBranch,
+  Puzzle,
+  WifiOff,
+  Globe,
+  CreditCard,
+  BarChart3,
+  Search,
+  Sparkles,
+  type LucideIcon,
+} from "lucide-react";
+
+export interface TechGroup {
+  category: string;
+  items: string[];
+}
+
+export interface Screenshot {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
+export interface FutureScopeItem {
+  icon: LucideIcon;
+  title: string;
+}
+
+export interface ProjectData {
+  slug: string;
+  name: string;
+  tagline: string;
+  description: string;
+  projectDescription: string[];
+  status: string[];
+  accent: string;
+  tint: string;
+  live?: string;
+  github?: string;
+  techStack: TechGroup[];
+  architectureImage?: string;
+  demoType: "placeholder" | "youtube" | "vimeo" | "mp4";
+  demoUrl?: string;
+  screenshots: Screenshot[];
+  futureScope: FutureScopeItem[];
+}
+
+export const projects: ProjectData[] = [
+  {
+    slug: "canvazz-flow",
+    name: "Canvazz Flow",
+    tagline:
+      "A collaborative visual workspace built for teams to brainstorm, design, organize projects, and collaborate in real time.",
+    description:
+      "A modern collaborative whiteboard platform that combines an infinite canvas, workspaces, notifications, role-based collaboration, invitations, and project management into one seamless experience.",
+    projectDescription: [
+      "Canvazz Flow is a full-stack collaborative whiteboard platform designed for teams that need a unified space to brainstorm, plan, and execute projects visually. It combines an infinite canvas with structured workspace management, eliminating the fragmentation that comes with using multiple disconnected tools.",
+      "The platform supports real-time collaboration powered by Liveblocks CRDT sync, role-based permissions via Clerk, invitation workflows, and a notification system that keeps every team member in sync. Workspaces can be organized into projects, each with its own board, members, and settings.",
+      "Built with Next.js 15, React 19, Konva for canvas rendering, NestJS with Prisma on the backend, and PostgreSQL for data storage. The architecture prioritizes real-time performance, API consistency, and a clean component-driven design system.",
+    ],
+    status: ["Featured Project", "Production Ready"],
+    accent: "#5EA2FF",
+    tint: "from-[#5EA2FF]/25 via-[#5EA2FF]/8 to-transparent",
+    live: "#",
+    github: "#",
+    techStack: [
+      {
+        category: "Frontend",
+        items: [
+          "Next.js 15",
+          "React 19",
+          "TypeScript 5",
+          "Tailwind CSS v4",
+          "Konva + react-konva",
+          "Liveblocks",
+          "Socket.IO Client",
+          "Radix UI",
+          "shadcn/ui",
+          "Motion",
+          "SWR",
+          "Sonner",
+        ],
+      },
+      {
+        category: "Backend",
+        items: [
+          "NestJS 11",
+          "Prisma 7",
+          "Liveblocks Node",
+          "Socket.IO Server",
+          "Swagger",
+          "class-validator",
+        ],
+      },
+      {
+        category: "Database",
+        items: ["PostgreSQL"],
+      },
+      {
+        category: "Authentication",
+        items: ["Clerk"],
+      },
+      {
+        category: "Deployment",
+        items: ["Vercel", "Render"],
+      },
+    ],
+    architectureImage: "/images/canvasflow-architecture-diagram.svg",
+    demoType: "placeholder",
+    screenshots: [
+      {
+        src: "/images/projects/canvazz-flow/screenshot-1.png",
+        alt: "Canvazz Flow Dashboard",
+        caption: "Workspace dashboard with project overview",
+      },
+      {
+        src: "/images/projects/canvazz-flow/screenshot-2.png",
+        alt: "Infinite Canvas",
+        caption: "Infinite canvas with collaborative editing",
+      },
+      {
+        src: "/images/projects/canvazz-flow/screenshot-3.png",
+        alt: "Team Management",
+        caption: "Team management and role assignment",
+      },
+    ],
+    futureScope: [
+      { icon: Users, title: "Real-time collaborative editing" },
+      { icon: GitBranch, title: "Version history" },
+      { icon: Sparkles, title: "AI-assisted diagrams" },
+      { icon: Puzzle, title: "Canvas templates" },
+      { icon: WifiOff, title: "Offline support" },
+    ],
+  },
+  {
+    slug: "kairo",
+    name: "Kairo",
+    tagline:
+      "A modern AI prompt marketplace for discovering, organizing, and sharing high-quality prompts.",
+    description:
+      "A platform being built to help developers, creators, and businesses discover, organize, manage, and eventually monetize reusable AI prompts through a clean and scalable marketplace.",
+    projectDescription: [
+      "Kairo is a modern AI prompt marketplace currently under active development. The platform is designed to help developers, creators, and businesses discover, organize, and eventually monetize reusable AI prompts through a clean and scalable interface.",
+      "The marketplace organizes prompts by category, model, and use case, with creator profiles, ratings, and collections to help users find the highest-quality content. A built-in analytics dashboard gives creators insight into how their prompts perform.",
+      "Built with Next.js, TypeScript, Tailwind CSS, and a Node.js backend with PostgreSQL and Prisma, the architecture is designed for performance, SEO, and a premium user experience from day one.",
+    ],
+    status: ["Work In Progress"],
+    accent: "#A78BFA",
+    tint: "from-[#A78BFA]/25 via-[#A78BFA]/8 to-transparent",
+    live: "#",
+    github: "#",
+    techStack: [
+      {
+        category: "Frontend",
+        items: ["Next.js", "TypeScript", "Tailwind CSS"],
+      },
+      {
+        category: "Backend",
+        items: ["Node.js", "NestJS"],
+      },
+      {
+        category: "Database",
+        items: ["PostgreSQL", "Prisma"],
+      },
+      {
+        category: "Authentication",
+        items: ["JWT"],
+      },
+      {
+        category: "Media",
+        items: ["Cloudinary"],
+      },
+    ],
+    demoType: "placeholder",
+    screenshots: [
+      {
+        src: "/images/projects/kairo/screenshot-1.png",
+        alt: "Kairo Marketplace",
+        caption: "Browse curated AI prompts by category",
+      },
+      {
+        src: "/images/projects/kairo/screenshot-2.png",
+        alt: "Prompt Detail",
+        caption: "Detailed prompt view with examples and ratings",
+      },
+      {
+        src: "/images/projects/kairo/screenshot-3.png",
+        alt: "Creator Dashboard",
+        caption: "Creator dashboard with analytics",
+      },
+    ],
+    futureScope: [
+      { icon: Globe, title: "Marketplace launch" },
+      { icon: Users, title: "Creator profiles" },
+      { icon: CreditCard, title: "Payments" },
+      { icon: BarChart3, title: "Analytics" },
+      { icon: Sparkles, title: "AI recommendations" },
+      { icon: LayoutDashboard, title: "Public API" },
+    ],
+  },
+];
+
+export function getProjectBySlug(slug: string): ProjectData | undefined {
+  return projects.find((p) => p.slug === slug);
+}
