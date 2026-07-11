@@ -161,8 +161,8 @@ export const projects: ProjectData[] = [
     status: ["Work In Progress"],
     accent: "#A78BFA",
     tint: "from-[#A78BFA]/25 via-[#A78BFA]/8 to-transparent",
-    live: "#",
-    github: "#",
+    live: undefined,
+    github: undefined,
     techStack: [
       {
         category: "Frontend",

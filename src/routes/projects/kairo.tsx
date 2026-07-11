@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowUpRight, Github } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { getProjectBySlug } from "@/data/projects";
 import { SmoothScroll } from "@/components/portfolio/SmoothScroll";
 import { Footer } from "@/components/portfolio/Footer";
@@ -106,28 +106,13 @@ function KairoPage() {
                 </div>
               </div>
               <div className="flex flex-wrap items-center gap-3 md:pt-6">
-                {project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white text-[#0A0A0A] text-[13px] font-medium hover:bg-white/90 transition-all"
-                  >
-                    Live Demo
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
-                )}
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/[0.10] text-[13px] text-white/80 hover:bg-white/[0.04] hover:border-white/20 transition-all"
-                  >
-                    <Github className="w-3.5 h-3.5" />
-                    GitHub
-                  </a>
-                )}
+                <span className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/[0.10] text-[13px] text-white/60">
+                  <span
+                    className="inline-block w-2 h-2 rounded-full animate-pulse"
+                    style={{ backgroundColor: project.accent }}
+                  />
+                  Coming Soon
+                </span>
               </div>
             </motion.div>
           </div>
