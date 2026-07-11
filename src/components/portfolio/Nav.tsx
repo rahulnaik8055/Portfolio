@@ -44,6 +44,9 @@ export function Nav() {
             : "bg-transparent border border-transparent"
         }`}
       >
+        <a href="#home">
+          <img src="/favicon.png" alt="Logo" className="w-10 h-10" />
+        </a>
         <nav className="hidden md:flex items-center gap-5">
           {sections.map((s) => (
             <a
