@@ -120,7 +120,7 @@ export const projects: ProjectData[] = [
     ],
     architectureImage: "/images/canvasflow-architecture-diagram.svg",
     demoUrl: "/canvazz-flow-video.mp4",
-    demoType: "vimeo",
+    demoType: "mp4",
     screenshots: [
       {
         src: "/images/canvazz-flow/one.png",
