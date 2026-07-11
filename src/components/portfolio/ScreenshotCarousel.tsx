@@ -39,7 +39,7 @@ export function ScreenshotCarousel({
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -30 }}
             transition={{ duration: 0.6, ease }}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain object-center"
           />
         </AnimatePresence>
       </div>

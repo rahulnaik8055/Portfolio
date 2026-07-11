@@ -52,6 +52,15 @@ export const techIconMap: Record<string, string> = {
   Vercel: "vercel",
   Render: "render",
   JWT: "jsonwebtokens",
+  Motion: "framer",
+  "Lucide React": "lucide",
+  "Drizzle ORM": "drizzle",
+  Zod: "zod",
+  "Clerk Backend": "clerk",
+  Neon: "neon",
+  Svix: "react",
+  "next-themes": "nextdotjs",
+  Google: "google",
 };
 
 export function TechCard({

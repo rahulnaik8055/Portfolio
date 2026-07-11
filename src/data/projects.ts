@@ -74,8 +74,8 @@ export const projects: ProjectData[] = [
     status: ["Featured Project", "Production Ready"],
     accent: "#5EA2FF",
     tint: "from-[#5EA2FF]/25 via-[#5EA2FF]/8 to-transparent",
-    live: "#",
-    github: "#",
+    live: "https://www.canvazzflow.site",
+    github: "https://github.com/rahulnaik8055/CanvazzFlow",
     techStack: [
       {
         category: "Frontend",
@@ -119,20 +119,21 @@ export const projects: ProjectData[] = [
       },
     ],
     architectureImage: "/images/canvasflow-architecture-diagram.svg",
-    demoType: "placeholder",
+    demoUrl: "/canvazz-flow-video.mp4",
+    demoType: "vimeo",
     screenshots: [
       {
-        src: "/images/projects/canvazz-flow/screenshot-1.png",
+        src: "/images/canvazz-flow/one.png",
         alt: "Canvazz Flow Dashboard",
         caption: "Workspace dashboard with project overview",
       },
       {
-        src: "/images/projects/canvazz-flow/screenshot-2.png",
+        src: "/images/canvazz-flow/two.png",
         alt: "Infinite Canvas",
         caption: "Infinite canvas with collaborative editing",
       },
       {
-        src: "/images/projects/canvazz-flow/screenshot-3.png",
+        src: "/images/canvazz-flow/three.png",
         alt: "Team Management",
         caption: "Team management and role assignment",
       },
@@ -154,8 +155,8 @@ export const projects: ProjectData[] = [
       "A platform being built to help developers, creators, and businesses discover, organize, manage, and eventually monetize reusable AI prompts through a clean and scalable marketplace.",
     projectDescription: [
       "Kairo is a modern AI prompt marketplace currently under active development. The platform is designed to help developers, creators, and businesses discover, organize, and eventually monetize reusable AI prompts through a clean and scalable interface.",
-      "The marketplace organizes prompts by category, model, and use case, with creator profiles, ratings, and collections to help users find the highest-quality content. A built-in analytics dashboard gives creators insight into how their prompts perform.",
-      "Built with Next.js, TypeScript, Tailwind CSS, and a Node.js backend with PostgreSQL and Prisma, the architecture is designed for performance, SEO, and a premium user experience from day one.",
+      "The marketplace organizes prompts by category, model, and use case, with creator profiles, ratings, and collections to help users find the highest-quality content. Clerk handles authentication, Drizzle ORM manages the PostgreSQL database, and Google Gemini powers the reverse-prompt feature.",
+      "Built with Next.js 16 (App Router), TypeScript, Tailwind CSS 4, Motion for animations, and validated with Zod. Uploads go through Cloudinary, webhooks are processed via Svix, and the whole stack is type-safe from database to UI.",
     ],
     status: ["Work In Progress"],
     accent: "#A78BFA",
@@ -165,39 +166,51 @@ export const projects: ProjectData[] = [
     techStack: [
       {
         category: "Frontend",
-        items: ["Next.js", "TypeScript", "Tailwind CSS"],
+        items: ["Next.js", "React 19", "TypeScript 5", "Tailwind CSS v4", "Motion"],
+      },
+      {
+        category: "Auth",
+        items: ["Clerk"],
       },
       {
         category: "Backend",
-        items: ["Node.js", "NestJS"],
+        items: ["REST APIs", "Drizzle ORM"],
       },
       {
         category: "Database",
-        items: ["PostgreSQL", "Prisma"],
+        items: ["PostgreSQL", "Neon"],
       },
       {
-        category: "Authentication",
-        items: ["JWT"],
+        category: "Validation",
+        items: ["Zod"],
+      },
+      {
+        category: "AI",
+        items: ["Google"],
       },
       {
         category: "Media",
         items: ["Cloudinary"],
       },
+      {
+        category: "Tooling",
+        items: ["Lucide React", "Git"],
+      },
     ],
     demoType: "placeholder",
     screenshots: [
       {
-        src: "/images/projects/kairo/screenshot-1.png",
+        src: "/images/kairo/one.png",
         alt: "Kairo Marketplace",
         caption: "Browse curated AI prompts by category",
       },
       {
-        src: "/images/projects/kairo/screenshot-2.png",
+        src: "/images/kairo/two.png",
         alt: "Prompt Detail",
         caption: "Detailed prompt view with examples and ratings",
       },
       {
-        src: "/images/projects/kairo/screenshot-3.png",
+        src: "/images/kairo/three.png",
         alt: "Creator Dashboard",
         caption: "Creator dashboard with analytics",
       },
